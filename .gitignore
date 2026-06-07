@@ -220,6 +220,7 @@ __marimo__/
 # Python
 venv/
 __pycache__/
+venv_broken/
 *.pyc
 
 # Data
