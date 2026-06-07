@@ -1,12 +1,19 @@
-RAW_DATA_PATH = "data/raw/customer_churn.csv"
+import os
+from dotenv import load_dotenv
 
-PROCESSED_DATA_PATH = "data/processed/processed_customer_churn.csv"
+load_dotenv()
 
-MODEL_PATH = "models/churn_model.pkl"
+MODEL_PATH = os.getenv(
+    "MODEL_PATH",
+    "models/churn_model.pkl"
+)
 
-TARGET_COLUMN = "Churn"
+APP_ENV = os.getenv(
+    "APP_ENV",
+    "development"
+)
 
-RANDOM_STATE = 42
-
-TEST_SIZE = 0.2
-
+APP_VERSION = os.getenv(
+    "APP_VERSION",
+    "v1"
+)
